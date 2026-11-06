@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Basics Guide</title>
+  <style>
+    /* Overall layout */
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      height: 100vh;
+      color: #333;
+    }
+
+    /* Left: Sidebar (Table of Contents) */
+    sidebar {
+      width: 260px;
+      background: #f7f9fa;
+      border-right: 1px solid #e1e4e8;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    sidebar h2 { font-size: 1.2rem; margin-top: 0; }
+    sidebar ul { list-style: none; padding: 0; }
+    sidebar li { margin-bottom: 8px; }
+    sidebar a {
+      color: #0366d6;
+      text-decoration: none;
+      display: block;
+      padding: 6px 10px;
+      border-radius: 4px;
+    }
+    sidebar a:hover { background: #eef2f5; }
+
+    /* Right: Main content area */
+    main {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+    }
+    
+    /* Chapter visibility toggle */
+    .chapter { display: none; }
+    .chapter.active { display: block; }
+
+    /* Code display style */
+    pre {
+      background: #2d3748;
+      color: #f7fafc;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    code { font-family: monospace; }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Sidebar (Table of Contents) -->
+  <sidebar>
+    <h2>JS Basics</h2>
+    <ul>
+      <li><a href="#" onclick="showChapter('ch1')">Chapter 1: Variables & Constants</a></li>
+      <li><a href="#" onclick="showChapter('ch2')">Chapter 2: Conditionals (if)</a></li>
+      <li><a href="#" onclick="showChapter('ch3')">Chapter 3: Loops (for)</a></li>
+      <li><a href="#" onclick="showChapter('ch4')">Chapter 4: MAIKURA (for)</a></li>
+    </ul>
+  </sidebar>
